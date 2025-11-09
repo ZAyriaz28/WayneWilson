@@ -451,3 +451,65 @@ footer {
     box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3); /* Sombra más clara */
 }
 
+
+/*
+========================================
+  ESTILOS PARA LA SECCIÓN DE VIDEOS
+========================================
+*/
+
+.video-grid {
+  display: grid;
+  /* 3 columnas de tamaño igual en PC */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; /* Espacio entre los videos */
+  margin-top: 40px; /* Espacio después del título 'Proyectos en Video' */
+}
+
+.video-item {
+  text-align: center; /* Centra el título */
+  /* Sombra sutil para destacar el video */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px; /* Bordes redondeados para el contenedor */
+  background-color: #ffffff; /* Fondo blanco para el item */
+  overflow: hidden; /* Asegura que el video respete los bordes */
+}
+
+.video-item video {
+  /* El video ocupa todo el ancho del item */
+  width: 100%; 
+  height: auto;
+  display: block; /* Elimina espacio extra debajo del video */
+}
+
+.video-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600; /* Peso de la fuente */
+  /* Ajusta el color para que coincida con tu tema */
+  color: #333; 
+  margin: 0; /* Quitamos margen por defecto */
+  padding: 15px 10px; /* Espaciado interno para el título */
+}
+
+
+/*
+========================================
+  ADAPTACIÓN PARA CELULARES (Responsivo)
+========================================
+*/
+
+/* Para tablets (menos de 992px) - 2 columnas */
+@media (max-width: 992px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Para celulares (menos de 768px) - 1 columna */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 25px; /* Reducimos el espacio entre videos */
+  }
+}
+
